@@ -10,7 +10,8 @@ public class Rocket : MonoBehaviour
     
     void Awake()
     {
-        // TODO : Rigidbody2D 컴포넌트를 가져옴(캐싱) 
+        // TODO : Rigidbody2D 컴포넌트를 가져옴(캐싱)
+        _rb2d = GetComponent<Rigidbody2D>();
     }
     
     public void Shoot()
