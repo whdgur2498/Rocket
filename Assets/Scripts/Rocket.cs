@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Rocket : MonoBehaviour
@@ -17,5 +18,7 @@ public class Rocket : MonoBehaviour
     public void Shoot()
     {
         // TODO : fuel이 넉넉하면 윗 방향으로 SPEED만큼의 힘으로 점프, 모자라면 무시
+        _rb2d.AddForce(Vector2.up * SPEED, ForceMode2D.Impulse);
+        // 버튼 한번당 -10 바닥에 닿으면 초기화
     }
 }
